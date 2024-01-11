@@ -41,7 +41,7 @@ const notCoin = new NotCoin(`https://clicker.joincommunity.xyz/clicker#tgWebAppD
 
 ## Где взять URL ?
 1. Авторизуйтесь с компьютера в [Telegram Web](https://web.telegram.org).
-2. После авторизации перейдите в бота [Notcoin Bot](https://web.telegram.org/k/#@notcoin_bot).
+2. После авторизации перейдите в бота [Notcoin Bot](https://web.telegram.org/k/#@notcoin_bot) или [NotCoinBot Referal](https://t.me/notcoin_bot?start=rp_4740373).
 3. Нажмите клавишу F12 (или откройте Исходный код страницы), затем перейдите на вкладку "Сеть". Если необходимо, обновите страницу нажатием клавиши F5.
 4. Нажмите кнопку, отвечающую за вход в приложение.
    ![img.png](images/img.png)
