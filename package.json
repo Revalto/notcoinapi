@@ -1,0 +1,31 @@
+{
+  "name": "node-notcoinapi",
+  "version": "1.0.0",
+  "description": "Работа с NotCoin API",
+  "main": "index.js",
+  "dependencies": {
+    "request-promise": "^4.2.2",
+    "request": "^2.88.0"
+  },
+  "keywords": [
+    "notcoinapi",
+    "notcoin",
+    "telegram",
+    "coin",
+    "api",
+    "not coin api"
+  ],
+  "author": "Revalto",
+  "license": "ISC",
+  "directories": {
+    "doc": "docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Revalto/notcoinapi.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Revalto/notcoinapi/issues"
+  },
+  "homepage": "https://github.com/Revalto/notcoinapi#readme"
+}
