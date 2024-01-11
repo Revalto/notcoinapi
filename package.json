@@ -1,6 +1,6 @@
 {
   "name": "node-notcoinapi",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Работа с NotCoin API",
   "main": "index.js",
   "dependencies": {

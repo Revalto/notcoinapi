@@ -8,34 +8,10 @@ const NotCoint = require('notcoinapi');
 const notCoin = new NotCoin(`https://clicker.joincommunity.xyz/clicker#tgWebAppData=query_id%.....`);
 
 (async () => {
-    await notCoin.event();
-    await notCoin.auth();
-
-    setInterval(async () => {
-        try {
-            let profile = notCoin.getProfile();
-
-            if(profile.availableCoins < 100) {
-                return;
-            }
-
-            let clickCount = 1;
-
-            if(profile.availableCoins > 1790) {
-                clickCount = 1590;
-            } else {
-                clickCount = notCoin.rand(1, profile.availableCoins - 100);
-            }
-
-            await notCoin.click(clickCount);
-
-            profile = notCoin.getProfile();
-
-            console.log(`Click count: ${profile.availableCoins} | Balance: ${profile.balanceCoins}`);
-        } catch (e) {
-            console.log(e.message);
-        }
-    }, 15000);
+    await notCoin.event(); // Отправить запрос Event (На самом деле, не знаю для чего он отправляется)
+    await notCoin.auth(); // Авторизовываемся (Получение AccessToken и получение профиля)
+    await notCoin.click(1); // Кликнуть 1 раз (Если я правильно понял, 1 = 1 энергия, без учета множителя)
+    await notCoin.updateProfile() // Обновить профиль пользователя
 })();
 ```
 

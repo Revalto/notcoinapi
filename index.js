@@ -54,6 +54,10 @@ module.exports = class NotCoin {
 
         this.webAppSession = webAppSessionRequest.data;
 
+        await this.updateProfile();
+    }
+
+    async updateProfile() {
         const profileRequest = await request({
             uri: `${this.baseUrl}/clicker/profile`,
             headers: {
