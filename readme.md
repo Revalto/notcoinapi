@@ -1,18 +1,55 @@
 ## Дополнительная информация
+```
 Author: Revalto
 TON Wallet: UQBMOIVDlQG5r_VdzbZhVF9Xi4k388Ap9ti-XAfWFPo32bgz
+```
 
 ## Пример использования
 ```
-const NotCoint = require('notcoinapi');
+const NotCoin = require('notcoinapi');
 const notCoin = new NotCoin(`https://clicker.joincommunity.xyz/clicker#tgWebAppData=query_id%.....`);
 
 (async () => {
     await notCoin.event(); // Отправить запрос Event (На самом деле, не знаю для чего он отправляется)
     await notCoin.auth(); // Авторизовываемся (Получение AccessToken и получение профиля)
     await notCoin.click(1); // Кликнуть 1 раз (Если я правильно понял, 1 = 1 энергия, без учета множителя)
-    await notCoin.updateProfile() // Обновить профиль пользователя
+    await notCoin.updateProfile(); // Обновить профиль пользователя
+    await notCoin.getMerged(); // Нет информации
+    await notCoin.getCombineCompleted(); // Использованные Tasks (бусты)
+    await notCoin.task(2); // Использование буста (2 - Full Energy)
+    await notCoin.getMine(); // Рефералы
+    await notCoin.getPosition(); // На странице "Frens" выводится возможный бонус, если попадете в топ
+    await notCoin.getStat(); // Общая статистика игры    
+    await notCoin.claim(6); // Использование задания (Пункт Earn в игре)
+    await notCoin.getLeaderboard(); // Список лидеров
+    await notCoin.getLeaderboardWeekly(); // Список лидеров за неделю
+    await notCoin.getLeaderboardDaily(); // Список лидеров за день
+    await notCoin.getLeaderboardTeamWeekly(); // Список лидеров команд за неделю
+    await notCoin.getLeaderboardTeamDaily(); // Список лидеров команд за день
 })();
+```
+
+## Task List
+```
+1. Free Coins
+2. Full Energy
+3. Turbo
+```
+
+## Claim List
+```
+4. Welcome to TON NFT
+6. Join Squad
+5. Invite 10 frens
+42. Egg Fight Club
+13. Telegram Premium
+27. Whale
+38. Open Builders socials
+39. Arbuz Fest
+43. Poker competition
+37. Tonstarter Launchepad
+47. Superwhale
+46. Staking on TON
 ```
 
 ## Где взять URL ?

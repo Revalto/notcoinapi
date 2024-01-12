@@ -100,6 +100,169 @@ module.exports = class NotCoin {
         this.profile.balanceCoins = clickProfile.balanceCoins;
     }
 
+    getMerged() {
+        return request({
+            uri: `${this.baseUrl}/clicker/store/merged`,
+            headers: {
+                'Accept': 'application/json',
+                'Authorization': `Bearer ${this.webAppSession.accessToken}`
+            },
+            body: {},
+            json: true,
+            method: 'GET'
+        });
+    }
+
+    getCombineCompleted() {
+        return request({
+            uri: `${this.baseUrl}/clicker/task/combine-completed`,
+            headers: {
+                'Accept': 'application/json',
+                'Authorization': `Bearer ${this.webAppSession.accessToken}`
+            },
+            body: {},
+            json: true,
+            method: 'GET'
+        });
+    }
+
+    getStat() {
+        return request({
+            uri: `${this.baseUrl}/clicker/core/stat`,
+            headers: {
+                'Accept': 'application/json',
+                'Authorization': `Bearer ${this.webAppSession.accessToken}`
+            },
+            body: {},
+            json: true,
+            method: 'GET'
+        });
+    }
+
+    /**
+     * TaskID 3 - Turbo | 2 - Full Energy | 1 - Free Coins
+     * @param taskId
+     * @returns {Promise<*>}
+     */
+    task(taskId) {
+        return request({
+            uri: `${this.baseUrl}/clicker/task/${taskId}`,
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json',
+                'Authorization': `Bearer ${this.webAppSession.accessToken}`
+            },
+            body: {},
+            json: true,
+            method: 'POST'
+        });
+    }
+
+    claim(claimId) {
+        return request({
+            uri: `${this.baseUrl}/clicker/store/claim/${claimId}`,
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json',
+                'Authorization': `Bearer ${this.webAppSession.accessToken}`
+            },
+            body: {},
+            json: true,
+            method: 'POST'
+        });
+    }
+
+    getMine() {
+        return request({
+            uri: `${this.baseUrl}/clicker/referral/mine`,
+            headers: {
+                'Accept': 'application/json',
+                'Authorization': `Bearer ${this.webAppSession.accessToken}`
+            },
+            body: {},
+            json: true,
+            method: 'GET'
+        });
+    }
+
+    getPosition() {
+        return request({
+            uri: `${this.baseUrl}/clicker/referral/private/position`,
+            headers: {
+                'Accept': 'application/json',
+                'Authorization': `Bearer ${this.webAppSession.accessToken}`
+            },
+            body: {},
+            json: true,
+            method: 'GET'
+        });
+    }
+
+    getLeaderboard() {
+        return request({
+            uri: `${this.baseUrl}/clicker/referral/private/leaderboard`,
+            headers: {
+                'Accept': 'application/json',
+                'Authorization': `Bearer ${this.webAppSession.accessToken}`
+            },
+            body: {},
+            json: true,
+            method: 'GET'
+        });
+    }
+
+    getLeaderboardWeekly() {
+        return request({
+            uri: `${this.baseUrl}/clicker/league/leaderboard/public/user/gold/weekly`,
+            headers: {
+                'Accept': 'application/json',
+                'Authorization': `Bearer ${this.webAppSession.accessToken}`
+            },
+            body: {},
+            json: true,
+            method: 'GET'
+        });
+    }
+
+    getLeaderboardDaily() {
+        return request({
+            uri: `${this.baseUrl}/clicker/league/leaderboard/public/user/gold/daily`,
+            headers: {
+                'Accept': 'application/json',
+                'Authorization': `Bearer ${this.webAppSession.accessToken}`
+            },
+            body: {},
+            json: true,
+            method: 'GET'
+        });
+    }
+
+    getLeaderboardTeamWeekly() {
+        return request({
+            uri: `${this.baseUrl}/clicker/league/leaderboard/public/team/gold/weekly`,
+            headers: {
+                'Accept': 'application/json',
+                'Authorization': `Bearer ${this.webAppSession.accessToken}`
+            },
+            body: {},
+            json: true,
+            method: 'GET'
+        });
+    }
+
+    getLeaderboardTeamDaily() {
+        return request({
+            uri: `${this.baseUrl}/clicker/league/leaderboard/public/team/gold/daily`,
+            headers: {
+                'Accept': 'application/json',
+                'Authorization': `Bearer ${this.webAppSession.accessToken}`
+            },
+            body: {},
+            json: true,
+            method: 'GET'
+        });
+    }
+
     getProfile() {
         return this.profile;
     }
