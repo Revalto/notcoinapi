@@ -263,6 +263,32 @@ module.exports = class NotCoin {
         });
     }
 
+    getRobot() {
+        return request({
+            uri: `${this.baseUrl}/clicker/core/robot`,
+            headers: {
+                'Accept': 'application/json',
+                'Authorization': `Bearer ${this.webAppSession.accessToken}`
+            },
+            body: {},
+            json: true,
+            method: 'GET'
+        });
+    }
+
+    takeRobot() {
+        return request({
+            uri: `${this.baseUrl}/clicker/core/robot`,
+            headers: {
+                'Accept': 'application/json',
+                'Authorization': `Bearer ${this.webAppSession.accessToken}`
+            },
+            body: {},
+            json: true,
+            method: 'POST'
+        });
+    }
+
     getProfile() {
         return this.profile;
     }

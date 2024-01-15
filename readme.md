@@ -26,6 +26,8 @@ const notCoin = new NotCoin(`https://clicker.joincommunity.xyz/clicker#tgWebAppD
     await notCoin.getLeaderboardDaily(); // Список лидеров за день
     await notCoin.getLeaderboardTeamWeekly(); // Список лидеров команд за неделю
     await notCoin.getLeaderboardTeamDaily(); // Список лидеров команд за день
+    await notCoin.getRobot(); // Получить количество коинов, которые заработал робот
+    await notCoin.takeRobot(); // Забрать коины, которые заработал робот
 })();
 ```
 
